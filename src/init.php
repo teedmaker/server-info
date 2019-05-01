@@ -51,8 +51,8 @@ define('HOST_ADDR', $host);
 /**
  * Get path to root directory
  */
-$base = dirname($_SERVER['SCRIPT_FILENAME'], 2) . '/';
-define('BASE', $base);
+$core = dirname($_SERVER['SCRIPT_FILENAME'], 2) . '/';
+define('CORE', $core);
 
 /**
  * Get actual branch, like: mysite.com/[teste], mysite.com/[user/23]

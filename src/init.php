@@ -27,12 +27,8 @@ $port = $port? ":{$port}" : null;
 define('PORT', $port);
 
 /**
- * 
- * Getting actual host
- * 
+ * Getting actual host, like: http://mysite:8000
  */
-
-// the PHP_SELF points to /public/[index.php] file, then roolback 2 and get the phpSELF
 $phpSelf     = dirname($_SERVER['PHP_SELF'], 2);
 $serverName  = $_SERVER['SERVER_NAME'];
 $host        = $serverName . PORT . $phpSelf;
@@ -40,6 +36,16 @@ $host        = str_replace('//', '/', $host);
 $host        = trim($host, '/');
 $host        = SCHEME . "://{$host}/";
 define('HOST', $host);
+
+/**
+ * Getting actual host addr, like: http://127.0.0.1:8000
+ */
+$remoteAddr  = $_SERVER['REMOTE_ADDR'] ?? '127.0.0.1';
+$host        = $remoteAddr . PORT . $phpSelf;
+$host        = str_replace('//', '/', $host);
+$host        = trim($host, '/');
+$host        = SCHEME . "://{$host}/";
+define('HOST_ADDR', $host);
 
 // getting path from general files
 $base = dirname($_SERVER['SCRIPT_FILENAME'], 2) . '/';

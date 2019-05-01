@@ -32,21 +32,21 @@ define('PORT', $port);
 $scriptName  = $_SERVER['SCRIPT_NAME'] ?? '/index.php';
 $scriptName  = dirname($_SERVER['SCRIPT_NAME'], 2);
 $serverName  = $_SERVER['SERVER_NAME'];
-$host        = $serverName . PORT . $scriptName;
-$host        = str_replace('//', '/', $host);
-$host        = trim($host, '/');
-$host        = SCHEME . "://{$host}/";
-define('HOST', $host);
+$base        = $serverName . PORT . $scriptName;
+$base        = str_replace('//', '/', $base);
+$base        = trim($base, '/');
+$base        = SCHEME . "://{$base}/";
+define('BASE', $base);
 
 /**
  * Getting actual host addr, like: http://127.0.0.1:8000
  */
 $remoteAddr  = $_SERVER['REMOTE_ADDR'] ?? '127.0.0.1';
-$host        = $remoteAddr . PORT . $scriptName;
-$host        = str_replace('//', '/', $host);
-$host        = trim($host, '/');
-$host        = SCHEME . "://{$host}/";
-define('HOST_ADDR', $host);
+$base        = $remoteAddr . PORT . $scriptName;
+$base        = str_replace('//', '/', $base);
+$base        = trim($base, '/');
+$base        = SCHEME . "://{$base}/";
+define('BASE_ADDR', $base);
 
 /**
  * Get path to root directory
@@ -66,14 +66,14 @@ define('BRANCH', $branch);
  */
 $requestURI = $_SERVER['REQUEST_URI'] ?? '';
 $requestURI = trim($requestURI, '/');
-$url = HOST . $requestURI;
-define('URL', $url);
+$actual = BASE . $requestURI;
+define('ACTUAL', $actual);
 
 /**
  * Get the BASE from actual url
  */
-$base = HOST . BRANCH;
-define('BASE', $base);
+$url = BASE . BRANCH;
+define('URL', $url);
 
 /**
  * Create a const to view all defineds consts in this

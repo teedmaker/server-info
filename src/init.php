@@ -20,6 +20,13 @@ $scheme = IS_HTTPS? 'https': 'http';
 define('SCHEME', $scheme);
 
 /**
+ * Get the actual port or null
+ */
+$port = $_SERVER['SERVER_PORT'] ?? null;
+$port = $port? ":{$port}" : null;
+define('PORT', $port);
+
+/**
  * 
  * Getting actual host
  * 

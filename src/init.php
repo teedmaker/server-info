@@ -60,3 +60,9 @@ define('BASE', $base);
 $branch = $_SERVER['PATH_INFO'] ?? null;
 $branch = trim($branch, '/');
 define('BRANCH', $branch);
+
+/**
+ * Create a const to view all defineds consts in this
+ */
+$info = get_defined_constants(true)['user'];
+define('SERVER_INFO', $info);

@@ -1,0 +1,16 @@
+{
+    "name": "teedmaker/tmphp-server-info",
+    "description": "Get info from actual server",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Tadeu Barbosa",
+            "email": "tadeufbarbosa@gmail.com"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "src/defines.php"
+        ]
+    }
+}

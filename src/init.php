@@ -6,8 +6,12 @@
 $method = strtolower($_SERVER['REQUEST_METHOD']);
 define('METHOD', $method);
 
-// define the scheme (http, https)
-$scheme = (isset($_SERVER['HTTPS']) && 'on' === $_SERVER['HTTPS'])? 'https' : 'http';
+/**
+ * Define if this is HTTPS
+ */
+$isHTTPS = (isset($_SERVER['HTTPS']) && 'on' === $_SERVER['HTTPS'])? true : false;
+define('IS_HTTPS', $isHTTPS);
+
 define('SCHEME', $scheme);
 
 // getting actual host

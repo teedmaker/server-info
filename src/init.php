@@ -62,6 +62,20 @@ $branch = trim($branch, '/');
 define('BRANCH', $branch);
 
 /**
+ * Get the actual URL
+ */
+$requestURI = $_SERVER['REQUEST_URI'] ?? '';
+$requestURI = trim($requestURI, '/');
+$url = HOST . $requestURI;
+define('URL', $url);
+
+/**
+ * Get the BASE from actual url
+ */
+$base = HOST . BRANCH;
+define('BASE', $base);
+
+/**
  * Create a const to view all defineds consts in this
  */
 $info = get_defined_constants(true)['user'];

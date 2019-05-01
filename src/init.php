@@ -47,7 +47,9 @@ $host        = trim($host, '/');
 $host        = SCHEME . "://{$host}/";
 define('HOST_ADDR', $host);
 
-// getting path from general files
+/**
+ * Get path to root directory
+ */
 $base = dirname($_SERVER['SCRIPT_FILENAME'], 2) . '/';
 define('BASE', $base);
 

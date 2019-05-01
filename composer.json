@@ -8,8 +8,11 @@
             "email": "tadeufbarbosa@gmail.com"
         }
     ],
-    "autoload": {
-        "files": [
+    "require": {
+        "funkjedi/composer-include-files": "^1.0"
+    },
+    "extra": {
+        "include_files": [
             "src/init.php"
         ]
     }

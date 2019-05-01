@@ -3,7 +3,8 @@
 /**
  * This const get the actual method (GET|HEAD|POST|PUT) in lowercase
  */
-$method = strtolower($_SERVER['REQUEST_METHOD']);
+$method = $_SERVER['REQUEST_METHOD'] ?? 'get';
+$method = strtolower($method);
 define('METHOD', $method);
 
 /**

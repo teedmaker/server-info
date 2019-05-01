@@ -33,12 +33,12 @@ define('PORT', $port);
  */
 
 // the PHP_SELF points to /public/[index.php] file, then roolback 2 and get the phpSELF
-$phpSelf        = dirname($_SERVER['PHP_SELF'], 2);
-$httpHost       = $_SERVER['HTTP_HOST'];
-$host           = "{$httpHost}{$phpSelf}";
-$host           = str_replace('//', '/', $host);
-$host           = trim($host, '/');
-$host           = SCHEME . "://{$host}/";
+$phpSelf     = dirname($_SERVER['PHP_SELF'], 2);
+$serverName  = $_SERVER['SERVER_NAME'];
+$host        = $serverName . PORT . $phpSelf;
+$host        = str_replace('//', '/', $host);
+$host        = trim($host, '/');
+$host        = SCHEME . "://{$host}/";
 define('HOST', $host);
 
 // getting path from general files

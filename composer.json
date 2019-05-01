@@ -13,7 +13,7 @@
     },
     "extra": {
         "include_files": [
-            "teedmaker/tmphp-server-info/src/init.php"
+            "/teedmaker/tmphp-server-info/src/init.php"
         ]
     }
 }

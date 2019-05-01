@@ -1,11 +1,10 @@
 <?php
 
-// getting a method from actual access (e.g.: GET|HEAD|POST|PUT...)
+/**
+ * This const get the actual method (GET|HEAD|POST|PUT) in lowercase
+ */
 $method = strtolower($_SERVER['REQUEST_METHOD']);
 define('METHOD', $method);
-
-var_dump(METHOD);
-exit;
 
 // define the scheme (http, https)
 $scheme = (isset($_SERVER['HTTPS']) && 'on' === $_SERVER['HTTPS'])? 'https' : 'http';

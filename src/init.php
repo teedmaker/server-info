@@ -53,8 +53,9 @@ define('HOST_ADDR', $host);
 $base = dirname($_SERVER['SCRIPT_FILENAME'], 2) . '/';
 define('BASE', $base);
 
-// getting actual branch (e.g.: site.com/my/actual/branch)
-$branch = str_replace("{$phpSelf}/", '', $_SERVER['REQUEST_URI']);
+/**
+ * Get actual branch, like: mysite.com/[teste], mysite.com/[user/23]
+ */
+$branch = $_SERVER['PATH_INFO'] ?? null;
 $branch = trim($branch, '/');
-$branch = empty($branch)? '/': $branch;
 define('BRANCH', $branch);

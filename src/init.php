@@ -29,9 +29,10 @@ define('PORT', $port);
 /**
  * Getting actual host, like: http://mysite:8000
  */
-$phpSelf     = dirname($_SERVER['PHP_SELF'], 2);
+$scriptName  = $_SERVER['SCRIPT_NAME'] ?? '/index.php';
+$scriptName  = dirname($_SERVER['SCRIPT_NAME'], 2);
 $serverName  = $_SERVER['SERVER_NAME'];
-$host        = $serverName . PORT . $phpSelf;
+$host        = $serverName . PORT . $scriptName;
 $host        = str_replace('//', '/', $host);
 $host        = trim($host, '/');
 $host        = SCHEME . "://{$host}/";
@@ -41,7 +42,7 @@ define('HOST', $host);
  * Getting actual host addr, like: http://127.0.0.1:8000
  */
 $remoteAddr  = $_SERVER['REMOTE_ADDR'] ?? '127.0.0.1';
-$host        = $remoteAddr . PORT . $phpSelf;
+$host        = $remoteAddr . PORT . $scriptName;
 $host        = str_replace('//', '/', $host);
 $host        = trim($host, '/');
 $host        = SCHEME . "://{$host}/";

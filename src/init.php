@@ -13,6 +13,10 @@ define('METHOD', $method);
 $isHTTPS = (isset($_SERVER['HTTPS']) && 'on' === $_SERVER['HTTPS'])? true : false;
 define('IS_HTTPS', $isHTTPS);
 
+/**
+ * Define if this is http or https urls
+ */
+$scheme = IS_HTTPS? 'https': 'http';
 define('SCHEME', $scheme);
 
 // getting actual host

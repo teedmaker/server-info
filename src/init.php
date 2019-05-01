@@ -4,7 +4,8 @@
 $method = strtolower($_SERVER['REQUEST_METHOD']);
 define('METHOD', $method);
 
-echo METHOD;
+var_dump(METHOD);
+exit;
 
 // define the scheme (http, https)
 $scheme = (isset($_SERVER['HTTPS']) && 'on' === $_SERVER['HTTPS'])? 'https' : 'http';

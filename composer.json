@@ -10,7 +10,7 @@
     ],
     "autoload": {
         "files": [
-            "src/defines.php"
+            "src/init.php"
         ]
     }
 }

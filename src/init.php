@@ -53,11 +53,6 @@ define('HOST_ADDR', $host);
 $base = dirname($_SERVER['SCRIPT_FILENAME'], 2) . '/';
 define('BASE', $base);
 
-// getting path from core of this project
-$core = dirname(__FILE__, 2);
-$core = str_replace('\\', '/', $core) . '/';
-define('CORE', $core);
-
 // getting actual branch (e.g.: site.com/my/actual/branch)
 $branch = str_replace("{$phpSelf}/", '', $_SERVER['REQUEST_URI']);
 $branch = trim($branch, '/');

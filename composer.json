@@ -5,7 +5,8 @@
     "authors": [
         {
             "name": "Tadeu Barbosa",
-            "email": "tadeufbarbosa@gmail.com"
+            "email": "tadeufbarbosa@gmail.com",
+            "homepage": "https://www.linkedin.com/in/tadeubarbosa/"
         }
     ],
     "require": {

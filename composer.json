@@ -2,6 +2,7 @@
     "name": "teedmaker/tmphp-server-info",
     "description": "Get info from actual server",
     "type": "library",
+    "license": "MIT",
     "authors": [
         {
             "name": "Tadeu Barbosa",

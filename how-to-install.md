@@ -1,4 +1,4 @@
-## How to use
+## How to install
 
 You can see here how to install this project and initialize.
 

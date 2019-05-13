@@ -14,11 +14,11 @@
         "type": "package",
         "package": {
             "name": "tadeubarbosa/composer-include-files",
-            "version": "dev-master",
+            "version": "master",
             "source": {
-                "url": "https://github.com/tadeubarbosa/composer-include-files.git",
+                "url": "git@github.com:tadeubarbosa/composer-include-files.git",
                 "type": "git",
-                "reference": "dev-master"
+                "reference": "master"
             }
         }
     }],

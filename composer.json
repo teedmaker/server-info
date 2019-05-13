@@ -23,6 +23,6 @@
         }
     }],
     "require": {
-        "tadeubarbosa/composer-include-files": "^1.0"
+        "tadeubarbosa/composer-include-files": "dev-master"
     }
 }

@@ -8,9 +8,21 @@
             "name": "Tadeu Barbosa",
             "email": "tadeufbarbosa@gmail.com",
             "homepage": "https://www.linkedin.com/in/tadeubarbosa/"
-        }
+        }   
     ],
+    "repositories": [{
+        "type": "package",
+        "package": {
+            "name": "tadeubarbosa/composer-include-files",
+            "version": "master",
+            "source": {
+                "url": "https://github.com/tadeubarbosa/composer-include-files.git",
+                "type": "git",
+                "reference": "master"
+            }
+        }
+    }],
     "require": {
-        "funkjedi/composer-include-files": "^1.0"
+        "tadeubarbosa/composer-include-files": "^1.0"
     }
 }

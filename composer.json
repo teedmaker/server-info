@@ -3,14 +3,17 @@
     "description": "Get info from actual server",
     "type": "library",
     "license": "MIT",
-    "authors": [
-        {
-            "name": "Tadeu Barbosa",
-            "email": "tadeufbarbosa@gmail.com",
-            "homepage": "https://www.linkedin.com/in/tadeubarbosa/"
-        }   
-    ],
+    "authors": [{
+        "name": "Tadeu Barbosa",
+        "email": "tadeufbarbosa@gmail.com",
+        "homepage": "https://www.linkedin.com/in/tadeubarbosa/"
+    }],
     "require": {
         "0.0.0/composer-include-files": "^1.5"
+    },
+    "extra": {
+        "include_files": [
+            "src/init.php"
+        ]
     }
 }

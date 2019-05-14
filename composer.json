@@ -10,19 +10,7 @@
             "homepage": "https://www.linkedin.com/in/tadeubarbosa/"
         }   
     ],
-    "repositories": [{
-        "type": "package",
-        "package": {
-            "name": "tadeubarbosa/composer-include-files",
-            "version": "master",
-            "source": {
-                "url": "git@github.com:tadeubarbosa/composer-include-files.git",
-                "type": "git",
-                "reference": "master"
-            }
-        }
-    }],
     "require": {
-        "tadeubarbosa/composer-include-files": "dev-master"
+        "0.0.0/composer-include-files": "^1.5"
     }
 }

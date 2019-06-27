@@ -21,36 +21,25 @@ Of course, remember to put this require on the begnning of your file! Maybe afte
 
 ### using composer
 
-You can use `composer` here! It's the better way for me.
+You can use `composer` here! It's the best way, I think.
 
 Just run:
 
 > composer require teedmaker/tmphp-server-info
 
-After doing it, you need to add a script in your `composer file`.
+After doing that, you're done
 
 #### a bit of info before!
 
-When I was developing this project, I has depared with a troub:
+While I was developing this project, I was deeply troubled by a major deficiency in how Composer operates:
 
-The `composer` was not putting my `init.php` in the beginning, but after a list of files. Then I has find one solution that works perfectly for me! The `funkjedi/composer-include-files` project (you can see the directory [here](funkjedi/composer-include-files)).
+See, `composer` was not putting my `init.php` in the beginning, but after a list of files. This meant, among other things, that no other library could (safely) use this project. 
 
-#### the solution
+At last, I has find one solution that works perfectly for me! The `phpexperts/composer-include-files` project (you can see the project [here](https://github.com/phpexpertsinc/composer-include-files)).
 
-Then you need to put these script in your `composer.json` file:
-
-````json
-{
-    ...
-    "extra": {
-        "include_files": [
-            "vendor/teedmaker/tmphp-server-info/src/init.php"
-        ]
-    }
-    ...
-}
-````
+Now, you don't have to bother learning arcane Composer configurations. Just `require` my project and you're good to go!
 
 ### You are ready!
 
-I think that you are ready! You has find a error? Tell us!
+I think that you are ready! Have you found an error? Please report it to us at GitHub!
+https://github.com/teedmaker/tmphp-server-info

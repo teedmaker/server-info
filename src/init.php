@@ -31,6 +31,7 @@ define('PORT', $port);
  */
 $scriptName  = isset($_SERVER['SCRIPT_NAME'])? $_SERVER['SCRIPT_NAME']: '/index.php';
 $scriptName  = dirname($_SERVER['SCRIPT_NAME'], 2);
+$scriptName  = trim($scriptName, '\\');
 $serverName  = $_SERVER['SERVER_NAME'];
 $base        = $serverName . PORT . $scriptName;
 $base        = str_replace('//', '/', $base);

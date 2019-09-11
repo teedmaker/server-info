@@ -3,7 +3,7 @@
 /**
  * This const get the actual method (GET|HEAD|POST|PUT) in lowercase
  */
-$method = $_SERVER['REQUEST_METHOD'] ?? 'get';
+$method = isset($_SERVER['REQUEST_METHOD'])? $_SERVER['REQUEST_METHOD']: 'get';
 $method = strtolower($method);
 define('METHOD', $method);
 
@@ -22,14 +22,14 @@ define('SCHEME', $scheme);
 /**
  * Get the actual port or null
  */
-$port = $_SERVER['SERVER_PORT'] ?? null;
+$port = isset($_SERVER['SERVER_PORT'])? $_SERVER['SERVER_PORT']: null;
 $port = $port? ":{$port}" : null;
 define('PORT', $port);
 
 /**
  * Getting actual host, like: http://mysite:8000
  */
-$scriptName  = $_SERVER['SCRIPT_NAME'] ?? '/index.php';
+$scriptName  = isset($_SERVER['SCRIPT_NAME'])? $_SERVER['SCRIPT_NAME']: '/index.php';
 $scriptName  = dirname($_SERVER['SCRIPT_NAME'], 2);
 $serverName  = $_SERVER['SERVER_NAME'];
 $base        = $serverName . PORT . $scriptName;
@@ -41,7 +41,7 @@ define('BASE', $base);
 /**
  * Getting actual host addr, like: http://127.0.0.1:8000
  */
-$remoteAddr  = $_SERVER['REMOTE_ADDR'] ?? '127.0.0.1';
+$remoteAddr  = isset($_SERVER['REMOTE_ADDR'])? $_SERVER['REMOTE_ADDR']: '127.0.0.1';
 $base        = $remoteAddr . PORT . $scriptName;
 $base        = str_replace('//', '/', $base);
 $base        = trim($base, '/');
@@ -57,14 +57,14 @@ define('CORE', $core);
 /**
  * Get actual branch, like: mysite.com/[teste], mysite.com/[user/23]
  */
-$branch = $_SERVER['PATH_INFO'] ?? null;
+$branch = isset($_SERVER['PATH_INFO'])? $_SERVER['PATH_INFO']: null;
 $branch = trim($branch, '/');
 define('BRANCH', $branch);
 
 /**
  * Get the actual URL
  */
-$requestURI = $_SERVER['REQUEST_URI'] ?? '';
+$requestURI = isset($_SERVER['REQUEST_URI'])? $_SERVER['REQUEST_URI']: '';
 $requestURI = trim($requestURI, '/');
 $actual = BASE . $requestURI;
 define('ACTUAL', $actual);
